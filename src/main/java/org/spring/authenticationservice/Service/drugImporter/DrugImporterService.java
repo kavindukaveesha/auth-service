@@ -2,6 +2,7 @@ package org.spring.authenticationservice.Service.drugImporter;
 
 import org.spring.authenticationservice.DTO.drugImporter.DrugImporterRegisterRequest;
 import org.spring.authenticationservice.DTO.drugImporter.DrugImporterUpdateRequest;
+import org.spring.authenticationservice.exception.ResourceNotFoundException;
 import org.spring.authenticationservice.model.drugImporter.DrugImporter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,9 +22,7 @@ import java.util.UUID;
 
 // Interface
 public interface DrugImporterService {
-    DrugImporter registerDrugImporter(DrugImporterRegisterRequest registerDto,
-                                      MultipartFile nicotineProofFile,
-                                      MultipartFile licenseProofFile) throws Exception;
+    DrugImporter registerDrugImporter(DrugImporterRegisterRequest registerDto) throws Exception;
 
     DrugImporter findById(Long id) throws Exception;
 
@@ -32,9 +31,8 @@ public interface DrugImporterService {
     List<DrugImporter> findAll();
 
     DrugImporter updateDrugImporter(Long id,
-                                    DrugImporterUpdateRequest updateDto,
-                                    MultipartFile nicotineProofFile,
-                                    MultipartFile licenseProofFile) throws Exception;
+                                    DrugImporterUpdateRequest updateDto) throws ResourceNotFoundException;
+
 
     void deleteDrugImporter(Long id) throws Exception;
 

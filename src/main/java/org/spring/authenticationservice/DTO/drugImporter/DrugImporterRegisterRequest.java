@@ -1,5 +1,6 @@
 package org.spring.authenticationservice.DTO.drugImporter;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -53,6 +54,11 @@ public class DrugImporterRegisterRequest {
     private String additionalText;
 
     // File upload fields
-    private MultipartFile nicotineProofFile;
-    private MultipartFile licenseProofFile;
+    private String nicotineProofUrl;
+
+    private String licenseProofUrl;
+
+
+
+
 }

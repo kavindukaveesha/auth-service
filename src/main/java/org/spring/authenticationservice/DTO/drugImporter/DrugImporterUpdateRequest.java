@@ -48,6 +48,9 @@ public class DrugImporterUpdateRequest {
     private Boolean removeLicenseProof;
 
     // New files to upload
-    private MultipartFile nicotineProofFile;
-    private MultipartFile licenseProofFile;
+    // File upload fields
+    private String nicotineProofUrl;
+
+    private String licenseProofUrl;
+
 }
