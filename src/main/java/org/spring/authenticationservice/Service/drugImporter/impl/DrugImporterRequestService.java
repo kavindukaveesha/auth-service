@@ -1,4 +1,4 @@
-package org.spring.authenticationservice.Service.drugImporter;
+package org.spring.authenticationservice.Service.drugImporter.impl;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;

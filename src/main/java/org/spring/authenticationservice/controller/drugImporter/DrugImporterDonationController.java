@@ -10,8 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.spring.authenticationservice.DTO.donation.DonationRequestResponseDto;
 import org.spring.authenticationservice.DTO.drugImporter.DrugImporterRequestDetailDto;
-
-import org.spring.authenticationservice.Service.drugImporter.DrugImporterRequestService;
+import org.spring.authenticationservice.Service.drugImporter.impl.DrugImporterRequestService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
